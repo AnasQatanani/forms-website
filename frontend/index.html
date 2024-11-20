@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Products Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Industrial Products Order Form</h1>
+        
+        <div class="product-section">
+            <h2>Product Selection</h2>
+            <select id="productSelect" required>
+                <option value="">Select a product...</option>
+            </select>
+            
+            <div id="productDetails" class="hidden">
+                <h3>Product Details</h3>
+                <p>Article Number: <span id="articleNumber"></span></p>
+                <p>Description: <span id="description"></span></p>
+                <p>Price: <span id="price"></span></p>
+            </div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+
+        <div id="orderStatus" class="order-status hidden">
+            <h3>Order Status</h3>
+            <p id="statusMessage"></p>
+        </div>
+
+        <!-- Order Management Section -->
+        <div class="order-management">
+            <h2>Order Management</h2>
+            <div id="orderList" class="order-list">
+                <!-- Orders will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
